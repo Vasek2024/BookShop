@@ -17,118 +17,148 @@
                 <img class="header__mobil-icon" src="./images/svg/header-icon-nav.svg" alt="Разверни навигацию">
             </button>
             <nav class="header__nav">
-                <ul>
-                    <li class="header__nav-list"><a href="#">books</a></li>
-                    <li class="header__nav-list"><a href="#">audiobooks</a></li>
-                    <li class="header__nav-list"><a href="#">Stationery & gifts</a></li>
-                    <li class="header__nav-list"><a href="#">blog</a></li>
+                <ul class="header__nav-ul">
+                    <li class="header__nav-list"><a class="header__nav-link link" href="#">books</a></li>
+                    <li class="header__nav-list"><a class="header__nav-link link" href="#">audiobooks</a></li>
+                    <li class="header__nav-list"><a class="header__nav-link link" href="#">Stationery & gifts</a></li>
+                    <li class="header__nav-list"><a class="header__nav-link link" href="#">blog</a></li>
                 </ul>
             </nav>
             <div class="header__icon">
                 <img class="header__icon-form" src="./images/svg/user.svg" alt="">
                 <img class="header__icon-search" src="./images/svg/search.svg" alt="">
-                <img class="header__icon-basket" src="./images/svg/shop bag.svg" alt="">
+                
+                <div class="header__icon-number">
+                    <img class="header__icon-basket" src="./images/svg/shop bag.svg" alt="">
+                    <span class="header__icon-quantity">4</span>
+                </div>
             </div>
         </header>
         <main class="main">
 
-            <div class="main__slider">
 
+            <div class="main__slider">
                 <section class="vystovka">
-                    <div class="vystovka__description description">
-                        <h2 class="description__title">Completed projects</h2>
-                        <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in the
-                            construction </p>
-                        <p>market we have made happy more than 1000 families</p>
+                    <!-- <div class="vystovka__description description"> -->
+                        <!-- <h2 class="description__title">Completed projects</h2> -->
+                        <!-- <p>Only a small part of the work performed by our company is presented on the site. For 14 years on in the
+                            construction </p> -->
+                        <!-- <p>market we have made happy more than 1000 families</p> -->
             
                         <!-- блок для мобилки -->
-                        <div class="vystovka__slider slider">
+                        <!-- <div class="vystovka__slider slider">
                             <h3 class="vystovka__slider-tile">We realize your wildest fantasies</h3>
                             <div class="vystovka__slider-direction">
-                                <img class="vystovka__slider-left" src="./image/svg/mob_r.svg" alt="">
-                                <img class="vystovka__slider-right" src="./image/svg/mob_l.svg" alt="">
+                                <img class="vystovka__slider-left" src="./images/svg/mob_r.svg" alt="">
+                                <img class="vystovka__slider-right" src="./images/svg/mob_l.svg" alt="">
                             </div>
-                        </div>
+                        </div> -->
             
-                        <div class="description__sample">
+                        <!-- <div class="description__sample"> -->
                             <!-- обернуть отдельно -->
-                            <div class="description__sample-siti">
+                            <!-- <div class="description__sample-siti">
                                 <h4 class="description__siti">City:</h4>
                                 <p>Rostov-on-Don</p>
-                                <!-- <p>LCD admiral</p> -->
-                            </div>
-                            <div class="description__sample-apartment">
+                            </div> -->
+                            <!-- <div class="description__sample-apartment">
                                 <h4 class="description__apartment">apartment area:</h4>
                                 <p>81 m2</p>
-                            </div>
+                            </div> -->
                             <!-- обернуть отдельно -->
-                            <div class="description__sample-time">
+                            <!-- <div class="description__sample-time">
                                 <h4 class="description__time">Repair time:</h4>
                                 <p>3.5 months</p>
-                            </div>
+                            </div> -->
                             <!-- обернуть отдельно -->
             
                             <!-- обернуть отдельно -->
-                            <div class="description__sample-cost">
+                            <!-- <div class="description__sample-cost">
                                 <h4 class="description__cost">Repair Cost:</h4>
                                 <p>Upon request</p>
-                            </div>
-                            <div class="description__revers">
-                                <img class="description__revers-forward" src="./image/svg/left.svg" alt="Мотать назад">
+                            </div> -->
+                            <!-- <div class="description__revers">
+                                <img class="description__revers-forward" src="./images/svg/left.svg" alt="Мотать назад">
                                 <div class="description__revers-pagination">
                                     <button class="description__revers-btn active"></button>
                                     <button class="description__revers-btn"></button>
                                     <button class="description__revers-btn"></button>
-                                    <!-- <img class="description__revers-one" src="./image/svg/circle.svg" alt="Слайд 1">
-                                    <img class="description__revers-two" src="./image/svg/circle.svg" alt="Слайд 2">
-                                    <img class="description__revers-three" src="./image/svg/circle.svg" alt="Слайд 3"> -->
                                 </div>
-                                <img class="description__revers-back" src="./image/svg/right.svg" alt="Мотать вперёд">
-                            </div>
-                        </div>
-                        <!-- ПЕРЕМОТКВ лево право -->
+                                <img class="description__revers-back" src="./images/svg/right.svg" alt="Мотать вперёд">
+                            </div> -->
+                        <!-- </div> -->
+                        <!-- ПЕРЕМОТК В лево право -->
                         <!-- <div class="description__revers"></div> -->
-                    </div>
-                    <div class="vystovka__result result">
-                        <ul class="result__nav">
-                            <!-- <li><button>Rostov-on-Don, Admiral</button></li>
-                            <li><button>Sochi Thieves</button></li>
-                            <li><button>Rostov-on-Don Patriotic</button></li> -->
+                    <!-- </div> -->
+                    <!-- <div class="vystovka__result result"> -->
+                        <!-- <ul class="result__nav">
                             <li><a class="result__list result__list-active" href="#">Rostov-on-Don, Admiral</a></li>
                             <li><a class="result__list" href="#">Sochi Thieves</a></li>
                             <li><a class="result__list" href="#">Rostov-on-Don Patriotic</a></li>
-                        </ul>
+                        </ul> -->
                         <div class="result__slaider">
-                            <img class="result__img" src="./image/jpg/image 2.1.jpg" alt="Зал">
-                            <img class="result__img" src="./image/jpg/image 2.jpg" alt="Приёмная">
-                            <img class="result__img" src="./image/jpg/image 3.jpg" alt="Студия">
+                            <img class="result__img" src="./images/jpg/Vector.jpg" alt="Зал">
+                            <img class="result__img" src="./images/jpg/Vector(1).jpg" alt="Приёмная">
+                            <img class="result__img" src="./images/jpg/Vector(2).jpg" alt="Студия">
                         </div>
-                    </div>
+                        <div class="result__books-one">
+                            <a href="#" class="result__one-span">
+<pre>
+Change
+old book
+on new
+&#10230;
+</pre>
+                            </a>
+                        </div>
+                        <div class="result__books-two">
+                            <a href="#" class="result__two-span">
+<pre>
+top
+100
+books
+2022
+&#10230;    
+</pre>
+                            </a>
+                        </div>
+                        
+                    <!-- </div> -->
                 </section>
-
+                <div class="description__revers">
+                    <!-- <img class="description__revers-forward" src="./images/svg/left.svg" alt="Мотать назад"> -->
+                    <div class="description__revers-pagination">
+                        <button class="description__revers-btn active"></button>
+                        <button class="description__revers-btn"></button>
+                        <button class="description__revers-btn"></button>
+                        <!-- <img class="description__revers-one" src="./image/svg/circle.svg" alt="Слайд 1">
+                        <img class="description__revers-two" src="./image/svg/circle.svg" alt="Слайд 2">
+                        <img class="description__revers-three" src="./image/svg/circle.svg" alt="Слайд 3"> -->
+                    </div>
+                    <!-- <img class="description__revers-back" src="./images/svg/right.svg" alt="Мотать вперёд"> -->
+                </div>
 
 
             </div>
 
             <aside class="main__aside">
                 <nav  class="main__aside-nav">
-                    <ul>
-                        <li class="main__nav-list"><a href="#">Architecture</a></li>
-                        <li class="main__nav-list"><a href="#">Art & Fashion</a></li>
-                        <li class="main__nav-list"><a href="#">Biography</a></li>
-                        <li class="main__nav-list"><a href="#">Business</a></li>
-                        <li class="main__nav-list"><a href="#">Crafts & Hobbies</a></li>
-                        <li class="main__nav-list"><a href="#">Drama</a></li>
-                        <li class="main__nav-list"><a href="#">Fiction</a></li>
-                        <li class="main__nav-list"><a href="#">Food & Drink</a></li>
-                        <li class="main__nav-list"><a href="#">Health & Wellbeing</a></li>
-                        <li class="main__nav-list"><a href="#">History & Politics</a></li>
-                        <li class="main__nav-list"><a href="#">Humor</a></li>
-                        <li class="main__nav-list"><a href="#">Poetry</a></li>
-                        <li class="main__nav-list"><a href="#">Psychology</a></li>
-                        <li class="main__nav-list"><a href="#">Science</a></li>
-                        <li class="main__nav-list"><a href="#">Technology</a></li>
-                        <li class="main__nav-list"><a href="#">Travel & Maps</a></li>
+                    <ul class="main__nav-ul">
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Architecture</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Art & Fashion</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Biography</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Business</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Crafts & Hobbies</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Drama</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Fiction</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Food & Drink</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Health & Wellbeing</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">History & Politics</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Humor</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Poetry</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Psychology</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Science</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Technology</a></li>
+                        <li class="main__nav-list"><a class="main__nav-link link" href="#">Travel & Maps</a></li>
                     </ul>
                 </nav>
             </aside>
@@ -282,5 +312,6 @@
 
 
     </div>
+    <script src="./js/slaider.js"></script>
 </body>
 </html>

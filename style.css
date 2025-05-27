@@ -11,15 +11,48 @@
     justify-content: space-between;
     align-items: center;
     height: 116px;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+.header__logo-booksHop{
+    cursor: pointer;
 }
 .header__nav-mobil{
     display: none;
 }
-.header__nav ul,
+.header__nav-ul,
 .header__icon{
     display: flex;
     justify-content: space-between;
     column-gap: 2.5rem;
+    cursor: pointer;
+}
+.header__icon-number{
+
+}
+.header__icon-quantity{
+    text-align: center;
+    width: 13px;
+    height: 13px;
+    margin-top: -8px;
+    margin-left: 4px;
+    position: absolute;
+    background: red;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: capitalize;
+    color: #fff;
+    display: none;
+}
+.header__nav-link{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #5c6a79;
+    cursor: pointer;
 }
 
 
@@ -29,7 +62,6 @@
     grid-template-rows: 1fr auto;
 }
 .main__slider{
-    height: 116px;
     grid-column: 1/6;
     grid-row: 1/2;
 }
@@ -37,28 +69,25 @@
 
 
 
-
+/* СЛАЙДЕР */
 .vystovka {
-    padding: 107px 100px 416px 100px;
-    background: #131313;
-    display: flex;
-    flex-direction: row;
+    margin-bottom: 110px;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
-.block {
+/* .block {
     display: block;
-}
+} */
 
-.vystovka__description {
+/* .vystovka__description {
     margin: 60px 12px 0 0;
     width: 450px;
-}
+} */
 
-.description__title {
+/* .description__title {
     margin-bottom: 34px;
     font-weight: 400;
     font-size: 27px;
@@ -66,36 +95,36 @@
     letter-spacing: -0.07em;
     text-transform: uppercase;
     color: #e3b873;
-}
+} */
 
-.vystovka__description p {
+/* .vystovka__description p {
     font-weight: 400;
     font-size: 14px;
     line-height: 191%;
     color: #fff;
-}
+} */
 
-.vystovka__slider {
+/* .vystovka__slider {
     display: none;
-}
+} */
 
-.description__sample {
+/* .description__sample {
     margin: 41px 0 70px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     row-gap: 34px;
-}
+} */
 
-.description__sample-siti,
+/* .description__sample-siti,
 .description__sample-time,
 .description__sample-apartment,
 .description__sample-cost {
     width: 166px;
     display: inline-block;
-}
+} */
 
-.description__siti,
+/* .description__siti,
 .description__time,
 .description__apartment,
 .description__cost {
@@ -104,10 +133,15 @@
     line-height: 139%;
     text-transform: uppercase;
     color: #e3b873;
-}
+} */
 
 .description__revers {
-    margin-top: 30px;
+    /* margin-top: 50px;
+    margin-bottom: 50px; */
+    /* padding-top: 20px; */
+    /* margin-bottom: 50px; */
+    margin: 0 auto;
+    margin-bottom: 50px;
     width: 200px;
     height: 14px;
     display: flex;
@@ -129,15 +163,15 @@
     /* border: 1px solid red; */
     border-radius: 50px;
     cursor: pointer;
-    background: #131313;
+    background: #fff;
 }
 
 .description__revers-btn:hover {
-    background: #fff;
+    background: #9E98DC;
 }
 
 .active {
-    background: #fff;
+    background: #9E98DC;
 }
 
 .description__revers-forward,
@@ -145,9 +179,9 @@
     cursor: pointer;
 }
 
-.vystovka__result {
-    width: 684px;
-}
+/* .vystovka__result {
+    width: 62%;
+} */
 
 .result__nav {
     margin-bottom: 45px;
@@ -166,6 +200,9 @@
     color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
 }
+/* .result__slaider{
+    width: 600px;
+} */
 
 .result__list:hover {
     color: #e3b873;
@@ -177,6 +214,7 @@
     text-decoration: underline;
 }
 
+
 .result__img {
     width: 100%;
 }
@@ -184,6 +222,45 @@
 .result__img {
     animation: fade 0.8s;
 }
+/* ======================================================= */
+.result__books-one{
+    position: relative;
+    margin-left: 92%;
+    margin-top: -580px;
+    margin-bottom: 14px;
+    padding: 90px 0 0 4%;
+    width: 14%;
+    height: 204px;
+    background: #9e98dc;
+    /* display: inline-block; */
+    /* z-index: 40; */
+}
+.result__one-span{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #1c2a39;
+}
+.result__books-two{
+    position: relative;
+    margin-left: 102%;
+    /* margin-top: -400px; */
+    padding:140px 0 0 4%;
+    width: 14%;
+    height: 273px;
+    background: #ff8fe6;
+}
+.result__two-span{
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+font-size: 18px;
+text-transform: uppercase;
+color: #1c2a39;
+}
+/* ======================================================= */
 
 @keyframes fade {
     0% {
@@ -205,10 +282,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
 }
-.main__aside-nav{
-
-}
-.main__aside-nav ul{
+.main__nav-ul{
     padding-top: 45px;
     padding-bottom: 56px;
     padding-left: 140px;
@@ -219,6 +293,14 @@
     justify-content: center;
     row-gap: 1.6rem;
     background: #efeef6;
+}
+.main__nav-link{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #5c6a79;
+    cursor: pointer;
 }
 
 .main__article{
@@ -322,6 +404,9 @@ margin-bottom: 16px;
     .main__article{
         margin-left:-24%;
     }
+.result__books-two{
+margin-left: 86%;
+}
 }
 @media (max-width: 1140px) {
     .wrapper{
@@ -342,6 +427,7 @@ margin-bottom: 16px;
     }
 }
 @media (max-width: 1012px) {
+
     .main{
         grid-template-columns: 14rem 1fr 1fr 1fr 1fr;
     }
@@ -369,10 +455,6 @@ margin-bottom: 16px;
     .main{
         grid-template-columns: 14rem 1fr 1fr 1fr 1fr;
     }
-    /* .main__article{
-        margin-left: 5%;
-        flex-direction: column;
-    } */
     .main__aside-nav ul{
         padding-left: 10%;
         margin-left: 0;
@@ -382,11 +464,6 @@ margin-bottom: 16px;
         max-width: 100%;
         height: 30px;
     }
-    /* .main__article-section{
-        column-gap: 1rem;
-    } */
-
-
 
 .main__article{
     margin-left: 5%;
@@ -394,6 +471,13 @@ margin-bottom: 16px;
 }
 .main__article-section{
     width: 100%;
+}
+.vystovka{
+    margin-bottom: 10px;
+}
+.result__books-one,
+.result__books-two{
+display: none;
 }
 }
 
