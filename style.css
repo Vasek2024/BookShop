@@ -302,6 +302,12 @@ color: #1c2a39;
     color: #5c6a79;
     cursor: pointer;
 }
+.activLink{
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #1c2a39;
+    }
 
 .main__article{
     margin-top: 48px;

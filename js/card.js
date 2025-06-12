@@ -7,40 +7,11 @@ export class Card{
         this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
     }
     async start() {
-        // for (let i = 0; i < 2; i++) {
-        //     // console.log(rrrrrrrrrrrrr)
-        //     // this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
-        //     this.mainArticle.innerHTML = `
-        //     <section class="main__article-section">
-                    
-        //             <div class="main__section-carta">
-        //                 <img class="main__carta-img" src="./images/jpg/cover(1).jpg" alt="">
-        //             </div>
-        //             <div class="main__section-description">
-        //                 <h3 class="main__description-h3">Kevin Kwan</h3>
-        //                 <h1 class="main__description-h1">Crazy rich asians</h1>
-        //                 <div class="main__description-ratings">
-        //                     <img class="main__ratings-img" src="" alt="">
-        //                     <span class="main__ratings-num">252</span>
-        //                     <span class="main__ratings-review">review</span>
-        //                 </div>
-        //                 <div class="main__description-title">
-        //                     <p>the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-        //                 </div>
-        //                 <div class="main__description-price">
-        //                     <span class="main__price-currency">$</span>
-        //                     <span class="main__price-sum">4.99</span>
-        //                 </div>
-        //                 <button class="main__description-btn btn" type="button">buy now</button>
-        //             </div>
-                    
-        //         </section>`
-        // }
                     try{
                         await fetch('https://www.googleapis.com/books/v1/volumes?q='+this.search+'&key='+this.apiKey+'&maxResults=6')
                         .then((response) => {return response.json()})
                         .then((info) => {
-                            console.log(info.items[3].volumeInfo)
+                            // console.log(info.items[3].volumeInfo)
                             for (let i = 0; i < info.items.length; i++) {
                                 // this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
                                 this.articleSection = document.createElement('section')
@@ -90,72 +61,5 @@ export class Card{
                     catch (err){
                        console.log('Запрос не прошёл!')
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(this.datas)
-    
-
-    // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// export class Card{
-//     constructor(search){
-//         this.request = new Request(search) // вызываем класс Request (отправляя туда название книги)
-//         this.datas = this.request.request() // сохраняем то что вернул запрос в классе Request
-//     }
-//     start() {
-// console.log(this.datas)
-//     for (let i = 0; i < 4; i++) {
-//         this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
-//         this.mainArticle.innerHTML = `
-//         <section class="main__article-section">
-                
-//                 <div class="main__section-carta">
-//                     <img class="main__carta-img" src="./images/jpg/cover(1).jpg" alt="">
-//                 </div>
-//                 <div class="main__section-description">
-//                     <h3 class="main__description-h3">Kevin Kwan</h3>
-//                     <h1 class="main__description-h1">Crazy rich asians</h1>
-//                     <div class="main__description-ratings">
-//                         <img class="main__ratings-img" src="" alt="">
-//                         <span class="main__ratings-num">252</span>
-//                         <span class="main__ratings-review">review</span>
-//                     </div>
-//                     <div class="main__description-title">
-//                         <p>the outrageously funny debut novel about three super-rich, pedigreed Chinese families and the gossip...</p>
-//                     </div>
-//                     <div class="main__description-price">
-//                         <span class="main__price-currency">$</span>
-//                         <span class="main__price-sum">4.99</span>
-//                     </div>
-//                     <button class="main__description-btn btn" type="button">buy now</button>
-//                 </div>
-                
-//             </section>`
-//     }
-
-//     }
 }
