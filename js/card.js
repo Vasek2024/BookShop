@@ -3,17 +3,34 @@ export class Card{
     constructor(search){ // принимаем название книги
         this.apiKey = "AIzaSyCzhD-f6_4E5zbyaWjgn0RhaWv1qTVqfOY" 
         this.search = search
-        this.data = []
+        this.max = 6
+        // this.data = []
         this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
     }
+
+    updateSearch(newSearch) { // вывод книг при нажатии на катнгорию товаров (ссылки с боку)
+        this.search = newSearch;
+        this.start();
+      }
+
+      updateNews() { // Добавление ещё 6 книг
+        this.max *= 2
+        // this.search = newSearch;
+        this.start();
+      }
+
+      updateBasket(){ // Обновление карзины
+
+      }
+      
     async start() {
                     try{
-                        await fetch('https://www.googleapis.com/books/v1/volumes?q='+this.search+'&key='+this.apiKey+'&maxResults=6')
+                        await fetch('https://www.googleapis.com/books/v1/volumes?q='+this.search+'&key='+this.apiKey+'&maxResults='+this.max+'')
                         .then((response) => {return response.json()})
                         .then((info) => {
-                            // console.log(info.items[3].volumeInfo)
                             for (let i = 0; i < info.items.length; i++) {
-                                // this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
+                                // this.mainArticle = document.querySelector('.main__article') // общий блок под все карточки
+                                // this.mainArticle.remove(this.articleSection)
                                 this.articleSection = document.createElement('section')
                                 this.articleSection.className = 'main__article-section'
                                 this.articleSection.innerHTML = `
@@ -39,24 +56,7 @@ export class Card{
                                         </div>`
                                 this.mainArticle.append(this.articleSection)
                             }
-
                         })
-                        
-                        // .then((response) => response.json())
-                        // .then((json) => this.data = json.items)
-                        // console.log(this.data)
-                        // return this.data
-
-                        // .then((info) => {return info.items})
-                        
-            
-                        // .then((response) => response.json())
-                        // .then((json) => this.data = json.items)
-                        // return this.data
-                        // const data = await response.json();
-                        // this.data = data
-                        // console.log(this.data)
-                        // return this.data
                     }
                     catch (err){
                        console.log('Запрос не прошёл!')
