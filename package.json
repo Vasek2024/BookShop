@@ -1,0 +1,29 @@
+{
+  "name": "bookshop",
+  "version": "1.0.0",
+  "description": "project bookshop",
+  "main": "index.js",
+  "devDependencies": {
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vasek2024/BookShop.git"
+  },
+  "keywords": [
+    "javascript",
+    "js",
+    "webpack"
+  ],
+  "author": "Vasek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vasek2024/BookShop/issues"
+  },
+  "homepage": "https://github.com/Vasek2024/BookShop#readme"
+}

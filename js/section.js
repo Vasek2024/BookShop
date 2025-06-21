@@ -1,7 +1,7 @@
 import { Card } from './card.js'
 
-let search = 'php'; // начальное значение поиска
-let cards = new Card('php');
+let search = 'javascript'; // начальное значение поиска
+let cards = new Card(search);
     cards.start();
     
 let navUl = document.querySelector('.main__nav-ul');
@@ -22,6 +22,7 @@ loadBtn.addEventListener('click', function() {
         cards.updateNews();
 });
 
+// ВЫДАЁТ ОШИБКУ типа NULL
 let loadBasket = document.querySelector('.main__description-btn');
 loadBasket.addEventListener('click', function() {
         cards.updateBasket();
