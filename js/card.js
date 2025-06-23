@@ -9,8 +9,6 @@ export class Card{
         // this.data = []
         this.mainArticle = document.querySelector('.main__article') // общиц блок под все карточки
 
-        this.iconNumber = document.querySelector('.header__icon-number') // общиц блок под колличество товаров в карзине
-        this.iconBasket = document.querySelector('.header__icon-basket') // класный кружок
         this.iconQuantity = document.querySelector('.header__icon-quantity') // колличество товаров в карзине
     }
 
@@ -21,13 +19,13 @@ export class Card{
 
       updateNews() { // Добавление ещё 6 книг
         this.max *= 2
-        // this.search = newSearch;
         this.start();
       }
 
-      updateBasket(){ // Обновление карзины
-        this.iconQuantity.classList.remove('none')
-        console.log(this.iconQuantity);
+      updateBasket(i){ // Обновление карзины
+        this.i = i
+        this.iconQuantity.classList.remove('none') // удаляем класс none (показываем красный кружок)
+        this.iconQuantity.innerHTML = this.i // колличество нажатий
       }
       
     async start() {

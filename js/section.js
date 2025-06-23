@@ -22,8 +22,16 @@ loadBtn.addEventListener('click', function() {
         cards.updateNews();
 });
 
+
 // ВЫДАЁТ ОШИБКУ типа NULL
-let loadBasket = document.querySelector('.main__description-btn');
-loadBasket.addEventListener('click', function() {
-        cards.updateBasket();
-});
+// КАК БУД ТО ДАННОГО HTML ТЕГА НЕТ В DOM дереве
+// да же без клика по кнопке
+let loadBasket = document.querySelectorAll('.main__description-btn'),
+    i = 0
+    for (let loadBaskets of loadBasket){
+        loadBaskets.addEventListener('click', function() {
+            i += 1
+            cards.updateBasket(i)
+        });
+    }
+
