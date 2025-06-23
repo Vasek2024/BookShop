@@ -34,4 +34,3 @@ let loadBasket = document.querySelectorAll('.main__description-btn'),
             cards.updateBasket(i)
         });
     }
-
