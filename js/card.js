@@ -18,7 +18,7 @@ export class Card{
       }
 
       updateNews() { // Добавление ещё 6 книг
-        this.max += 6
+        this.max *= 1
         this.start();
       }
 
