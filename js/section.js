@@ -23,11 +23,15 @@ loadBtn.addEventListener('click', function() {
 });
 
 
-// ВЫДАЁТ ОШИБКУ типа NULL
+// ВЫДАЁТ ОШИБКУ типа NULL (если убрать цикл)
+// Если с циклом, то пустой NodeList
 // КАК БУД ТО ДАННОГО HTML ТЕГА НЕТ В DOM дереве
+
 // да же без клика по кнопке
 let loadBasket = document.querySelectorAll('.main__description-btn'),
     i = 0
+    console.log(loadBasket);
+    
     for (let loadBaskets of loadBasket){
         loadBaskets.addEventListener('click', function() {
             i += 1
