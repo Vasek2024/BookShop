@@ -43,100 +43,99 @@ export class Card{
                             for (let i = 0; i < info.items.length; i++) {
                               
                               // создаём структуру карточек товаров
-                              this.articleSection = document.createElement('section')
-                              this.articleSection.className = 'main__article-section'
+                              // this.articleSection = document.createElement('section')
+                              // this.articleSection.className = 'main__article-section'
 
-                              this.sectionCarta = document.createElement('div')
-                              this.sectionCarta.className = 'main__section-carta'
+                              // this.sectionCarta = document.createElement('div')
+                              // this.sectionCarta.className = 'main__section-carta'
 
-                              this.cartaimg = document.createElement('img')
-                              this.cartaimg.className = 'main__carta-img'
-                              this.cartaimg.src = `${info.items[i].volumeInfo.imageLinks.thumbnail}`
+                              // this.cartaimg = document.createElement('img')
+                              // this.cartaimg.className = 'main__carta-img'
+                              // this.cartaimg.src = `${info.items[i].volumeInfo.imageLinks.thumbnail}`
 
-                              this.sectionDescription = document.createElement('div')
-                              this.sectionDescription.className = 'main__section-description'
+                              // this.sectionDescription = document.createElement('div')
+                              // this.sectionDescription.className = 'main__section-description'
 
-                              this.descriptionH3 = document.createElement('h3')
-                              this.descriptionH3.className = 'main__description-h3'
-                              this.descriptionH3.textContent = `${info.items[i].volumeInfo.authors}`
+                              // this.descriptionH3 = document.createElement('h3')
+                              // this.descriptionH3.className = 'main__description-h3'
+                              // this.descriptionH3.textContent = `${info.items[i].volumeInfo.authors}`
 
-                              this.descriptionH1 = document.createElement('h1')
-                              this.descriptionH1.className = 'main__description-h1'
-                              this.descriptionH1.textContent = `${info.items[i].volumeInfo.title}`
+                              // this.descriptionH1 = document.createElement('h1')
+                              // this.descriptionH1.className = 'main__description-h1'
+                              // this.descriptionH1.textContent = `${info.items[i].volumeInfo.title}`
                               
-                              this.descriptionRatings = document.createElement('div')
-                              this.descriptionRatings.className = 'main__description-ratings'
+                              // this.descriptionRatings = document.createElement('div')
+                              // this.descriptionRatings.className = 'main__description-ratings'
 
-                              this.ratingsImg = document.createElement('img')
-                              this.ratingsImg.className = 'main__ratings-img'
+                              // this.ratingsImg = document.createElement('img')
+                              // this.ratingsImg.className = 'main__ratings-img'
 
-                              this.ratingsNum = document.createElement('span')
-                              this.ratingsNum.className = 'main__ratings-num'
-                              this.ratingsNum.textContent = `${info.items[i].volumeInfo.pageCount} `
+                              // this.ratingsNum = document.createElement('span')
+                              // this.ratingsNum.className = 'main__ratings-num'
+                              // this.ratingsNum.textContent = `${info.items[i].volumeInfo.pageCount} `
 
-                              this.ratingsReview = document.createElement('span')
-                              this.ratingsReview.className = 'main__ratings-review'
-                              this.ratingsReview.textContent = 'review'
+                              // this.ratingsReview = document.createElement('span')
+                              // this.ratingsReview.className = 'main__ratings-review'
+                              // this.ratingsReview.textContent = 'review'
 
-                              this.descriptionTitle = document.createElement('div')
-                              this.descriptionTitle.className = 'main__description-title'
+                              // this.descriptionTitle = document.createElement('div')
+                              // this.descriptionTitle.className = 'main__description-title'
 
-                              this.descriptionP = document.createElement('p')
-                              this.descriptionP.innerText = `${info.items[i].volumeInfo.description.substring(0, 70) + '...'}`
+                              // this.descriptionP = document.createElement('p')
+                              // this.descriptionP.innerText = `${info.items[i].volumeInfo.description.substring(0, 70) + '...'}`
 
-                              this.descriptionPrice = document.createElement('div')
-                              this.descriptionPrice.className = 'main__description-price'
+                              // this.descriptionPrice = document.createElement('div')
+                              // this.descriptionPrice.className = 'main__description-price'
 
-                              this.priceCurrency = document.createElement('span')
-                              this.priceCurrency.className = 'main__price-currency'
-                              this.priceCurrency.textContent = this.currency
+                              // this.priceCurrency = document.createElement('span')
+                              // this.priceCurrency.className = 'main__price-currency'
+                              // this.priceCurrency.textContent = this.currency
 
-                              this.priceSum = document.createElement('span')
-                              this.priceSum.className = 'main__price-sum'
-                              this.priceSum.textContent = '4.99'
+                              // this.priceSum = document.createElement('span')
+                              // this.priceSum.className = 'main__price-sum'
+                              // this.priceSum.textContent = '4.99'
 
-                              this.descriptionBtn = document.createElement('button')
-                              this.descriptionBtn.className = 'main__description-btn btn'
-                              this.descriptionBtn.textContent = 'buy now'
+                              // this.descriptionBtn = document.createElement('button')
+                              // this.descriptionBtn.className = 'main__description-btn btn'
+                              // this.descriptionBtn.textContent = 'buy now'
 
 
-                              this.articleSection.append(this.sectionCarta, this.sectionDescription)
-                              this.sectionCarta.append(this.cartaimg)
-                              this.sectionDescription.append(this.descriptionH3, this.descriptionH1, this.descriptionRatings)
-                              this.descriptionRatings.append(this.ratingsImg, this.ratingsNum, this.ratingsReview)
-                              this.descriptionTitle.append(this.descriptionP)
-                              this.sectionDescription.append(this.descriptionTitle, this.descriptionPrice)
-                              this.descriptionPrice.append(this.priceCurrency, this.priceSum)
-                              this.sectionDescription.append(this.descriptionBtn)
-                              this.mainArticle.append(this.articleSection)
+                              // this.articleSection.append(this.sectionCarta, this.sectionDescription)
+                              // this.sectionCarta.append(this.cartaimg)
+                              // this.sectionDescription.append(this.descriptionH3, this.descriptionH1, this.descriptionRatings)
+                              // this.descriptionRatings.append(this.ratingsImg, this.ratingsNum, this.ratingsReview)
+                              // this.descriptionTitle.append(this.descriptionP)
+                              // this.sectionDescription.append(this.descriptionTitle, this.descriptionPrice)
+                              // this.descriptionPrice.append(this.priceCurrency, this.priceSum)
+                              // this.sectionDescription.append(this.descriptionBtn)
+                              // this.mainArticle.append(this.articleSection)
         
-
-
-// Рабочая, но нельзя достать dom элемент
-                                // this.articleSection = document.createElement('section')
-                                // this.articleSection.className = 'main__article-section'
-                                // this.articleSection.innerHTML = `
-                                //         <div class="main__section-carta">
-                                //             <img class="main__carta-img" src="${info.items[i].volumeInfo.imageLinks.thumbnail}" alt="${info.items[i].volumeInfo.title}">
-                                //         </div>
-                                //         <div class="main__section-description">
-                                //             <h3 class="main__description-h3">${info.items[i].volumeInfo.authors}</h3>
-                                //             <h1 class="main__description-h1">${info.items[i].volumeInfo.title}</h1>
-                                //             <div class="main__description-ratings">
-                                //                 <img class="main__ratings-img" src="" alt="">
-                                //                 <span class="main__ratings-num">252</span>
-                                //                 <span class="main__ratings-review">review</span>
-                                //             </div>
-                                //             <div class="main__description-title">
-                                //                 <p>${info.items[i].volumeInfo.description.substring(0, 70) + '...'}</p>
-                                //             </div>
-                                //             <div class="main__description-price">
-                                //                 <span class="main__price-currency">$</span>
-                                //                 <span class="main__price-sum">${info.items[i].volumeInfo.pageCount}</span>
-                                //             </div>
-                                //             <button class="main__description-btn btn" type="button">buy now</button>
-                                //         </div>`
-                                // this.mainArticle.append(this.articleSection)
+                              
+                              // создаём структуру карточек товаров
+                                this.articleSection = document.createElement('section')
+                                this.articleSection.className = 'main__article-section'
+                                this.articleSection.innerHTML = `
+                                        <div class="main__section-carta">
+                                            <img class="main__carta-img" src="${info.items[i].volumeInfo.imageLinks.thumbnail}" alt="${info.items[i].volumeInfo.title}">
+                                        </div>
+                                        <div class="main__section-description">
+                                            <h3 class="main__description-h3">${info.items[i].volumeInfo.authors}</h3>
+                                            <h1 class="main__description-h1">${info.items[i].volumeInfo.title}</h1>
+                                            <div class="main__description-ratings">
+                                                <img class="main__ratings-img" src="" alt="">
+                                                <span class="main__ratings-num">252</span>
+                                                <span class="main__ratings-review">review</span>
+                                            </div>
+                                            <div class="main__description-title">
+                                                <p>${info.items[i].volumeInfo.description.substring(0, 70) + '...'}</p>
+                                            </div>
+                                            <div class="main__description-price">
+                                                <span class="main__price-currency">$</span>
+                                                <span class="main__price-sum">${info.items[i].volumeInfo.pageCount}</span>
+                                            </div>
+                                            <button class="main__description-btn btn" type="button">buy now</button>
+                                        </div>`
+                                this.mainArticle.append(this.articleSection)
 
                             }
                         })
