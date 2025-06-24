@@ -12,7 +12,7 @@ export class Card{
         this.iconQuantity = document.querySelector('.header__icon-quantity') // колличество товаров в карзине
     }
 
-    updateSearch(newSearch) { // вывод книг при нажатии на катнгорию товаров (ссылки с боку)
+    updateSearch(newSearch) { // вывод книг при нажатии на катигорию товаров (ссылки с боку)
         this.search = newSearch;
         this.start();
       }
@@ -24,8 +24,15 @@ export class Card{
 
       updateBasket(i){ // Обновление карзины
         this.i = i
-        this.iconQuantity.classList.remove('none') // удаляем класс none (показываем красный кружок)
-        this.iconQuantity.innerHTML = this.i // колличество нажатий
+        if(this.i > 0){
+          this.iconQuantity.classList.remove('none') // удаляем класс none (показываем красный кружок)
+          this.iconQuantity.innerHTML = this.i // колличество нажатий
+        }
+        if(this.i < 1){
+          this.iconQuantity.classList.add('none') // удаляем класс none (показываем красный кружок)
+          // this.iconQuantity.innerHTML = this.i // колличество нажатий
+        }
+        
       }
       
     async start() {
@@ -34,6 +41,7 @@ export class Card{
                         .then((response) => {return response.json()})
                         .then((info) => {
                             for (let i = 0; i < info.items.length; i++) {
+                              
                               // создаём структуру карточек товаров
                               this.articleSection = document.createElement('section')
                               this.articleSection.className = 'main__article-section'
@@ -73,8 +81,8 @@ export class Card{
                               this.descriptionTitle = document.createElement('div')
                               this.descriptionTitle.className = 'main__description-title'
 
-                              // this.descriptionP = document.createElement('p')
-                              // this.descriptionP.innerText = `${info.items[i].volumeInfo.description.substring(0, 70) + '...'}`
+                              this.descriptionP = document.createElement('p')
+                              this.descriptionP.innerText = `${info.items[i].volumeInfo.description.substring(0, 70) + '...'}`
 
                               this.descriptionPrice = document.createElement('div')
                               this.descriptionPrice.className = 'main__description-price'

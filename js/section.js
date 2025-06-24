@@ -3,7 +3,8 @@ import { Card } from './card.js'
 let search = 'javascript'; // начальное значение поиска
 let cards = new Card(search);
     cards.start();
-    
+
+// вывод книг при нажатии на катигорию товаров (ссылки с боку)
 let navUl = document.querySelector('.main__nav-ul');
 navUl.addEventListener('click', function(event) {
     if (event.target.classList.contains('main__nav-link')) {
@@ -17,24 +18,26 @@ navUl.addEventListener('click', function(event) {
     }
 });
 
+// Добавление ещё 6 книг
 let loadBtn = document.querySelector('.article__btn-new');
 loadBtn.addEventListener('click', function() {
         cards.updateNews();
 });
 
-
-// ВЫДАЁТ ОШИБКУ типа NULL (если убрать цикл)
-// Если с циклом, то пустой NodeList
-// КАК БУД ТО ДАННОГО HTML ТЕГА НЕТ В DOM дереве
-
-// да же без клика по кнопке
-let loadBasket = document.querySelectorAll('.main__description-btn'),
-    i = 0
-    console.log(loadBasket);
-    
-    for (let loadBaskets of loadBasket){
-        loadBaskets.addEventListener('click', function() {
-            i += 1
-            cards.updateBasket(i)
-        });
+// обновление карзины, изменение стилей кнопки
+let i = 0
+document.querySelector('.main__article').addEventListener('click', function(event) {
+    if (event.target.classList.contains('main__description-btn')) {
+        event.target.classList.toggle('activBasket')
+        if(event.target.classList.contains('activBasket')){
+            event.target.textContent = 'IN THE CART'
+           i += 1; 
+        }
+        event.target.classList.toggle('btn')
+        if(event.target.classList.contains('btn')){
+            event.target.textContent = 'buy now'
+            i -= 1;
+         }
+        cards.updateBasket(i);
     }
+});
